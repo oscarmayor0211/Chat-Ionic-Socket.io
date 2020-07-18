@@ -10,7 +10,7 @@ io.on('connection', (socket) => {
 
     socket.on('set-nickname', (nickname) => {
         socket.nickname = nickname;
-        io.emit('user-changed', { user: nickname, evet: 'joined' });
+        io.emit('users-changed', { user: nickname, event: 'joined' });
     });
 
     socket.on('add-message', (message) => {
