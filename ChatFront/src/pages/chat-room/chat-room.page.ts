@@ -25,13 +25,13 @@ export class ChatRoomPage implements OnInit {
 
     this.getUsers().subscribe(data => {
       let user = data['user'];
-      console.log(data);
+      // console.log(data);
       
 
       if(data['event'] === 'left'){
-          this.showToast('user left: ' + user);
+          this.showToast('User left: ' + user);
       }else{
-        this.showToast('user joined: ' + user);
+        this.showToast('User joined: ' + user);
       }
     });
    }
@@ -70,11 +70,12 @@ export class ChatRoomPage implements OnInit {
   }
 
  async showToast(msg){
-    let alert= await this.toastCtrl.create({
-      message: msg,
-      duration:2000
-    });
-    alert.present();
+  let toast = await this.toastCtrl.create({
+    message: msg,
+    position: 'top',
+    duration: 2000
+  });
+  toast.present();
   }
 
 }

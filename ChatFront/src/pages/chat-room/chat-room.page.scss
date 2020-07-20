@@ -3,15 +3,16 @@
 }
 
 .message {
-    padding: 10px !important;
-    transition: all 250ms ease-in-out !important;
-    border-radius: 10px !important;
-    margin-bottom: 4px !important;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 4px;
+    white-space: pre-wrap;
 }
 
 .my_message {
     // background: color($colors, primary) !important;
-    color: #000 !important;
+    background: var(--ion-color-tertiary);
+    color: #fff;
 }
 
 .other_message {
@@ -26,6 +27,14 @@
 }
 
 .message_row {
-    background-color: #fff;
-    ;
+    margin-top: 0px;
+    border: 1px solid var(--ion-color-medium);
+    border-radius: 10px;
+    background: #fff;
+}
+
+.btn {
+    --padding-start: 0.5em;
+    --padding-end: 0.5em;
+    // background-color: blue;
 }
